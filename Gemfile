@@ -26,7 +26,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem "oa-oauth", :require => "omniauth/oauth"
+gem 'omniauth-facebook'
 
 
 # To use ActiveModel has_secure_password
