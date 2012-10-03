@@ -23,6 +23,20 @@
            ref.parentNode.insertBefore(js, ref);
          }(document));
  </script>
+ <script>
+  function onLogin(response) {
+        FB.api('/me', function(user) {
+           if(user != null) {
+              $("#form_email").val(user.email);
+              $("#form_first_name").val(user.first_name);
+              $("#form_last_name").val(user.last_name);
+              $("#form_gender").val(user.gender);
+              $("#form_birthdate").val(user.birthday);
+              $("#form_facebook_id").val(user.id);
+           }
+         });
+    }
+ </script>
 <body>
    <div class="fb-login-button" scope="email,user_interests" onlogin="onLogin()">Login with Facebook
   </div>
