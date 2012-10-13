@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  
 <%= yield %>
+
+<% @lists.each do |item| %>
+    <b>Name:</b> <%= item["name"] %>
+<% end %> 
 
 </body>
 </html>
